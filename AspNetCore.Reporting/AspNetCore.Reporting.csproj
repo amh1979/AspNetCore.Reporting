@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\public.props" />
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Title>
+      AspNetCore.Reporting, LocalReport, ServerReport, SSRS, ReportViewer
+    </Title>
+    <Description>
+     ASP.NET Core ReportViewer
+===
+## NOTE: This package has been `removed` to [`AspNetCore.Reporting`](https://www.nuget.org/packages/AspNetCore.Reporting). for localReport, ServerReport
+    </Description>
+    <PackageReleaseNotes>
+      This includes `LocalReport`, `ServerReport`. 
+      Replace ['AspNetCore.ReportViewer'](https://www.nuget.org/packages/AspNetCore.ReportViewer) with it
+      ## NOTE: AspNetCore.Reporting, LocalReport, ServerReport, SSRS, ReportViewer
+    </PackageReleaseNotes>    
+    <AssemblyTitle>AspNetCore.Reporting</AssemblyTitle>
+    <AssemblyName>AspNetCore.Reporting</AssemblyName>
+    <PackageId>AspNetCore.Reporting</PackageId>
+    <RootNamespace>AspNetCore.Reporting</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\AspNetCore.Reporting.xml</DocumentationFile>
+    <NoWarn>1701;1702;</NoWarn>
+    <WarningsAsErrors>NU1605;CS0108</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.ReportingServices" Version="2.1.0" />
+    <PackageReference Include="System.CodeDom" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.5.3" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCore.ReportingServices\AspNetCore.ReportingServices.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="wwwroot/**" Pack="true" PackageCopyToOutput="true" PackagePath=""></None>
+  </ItemGroup>
+</Project>

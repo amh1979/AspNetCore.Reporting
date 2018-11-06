@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Reporting", "AspNetCore.Reporting\AspNetCore.Reporting.csproj", "{A7F79B47-D6E0-489F-864A-E2223DBE685A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ReportingServices", "AspNetCore.ReportingServices\AspNetCore.ReportingServices.csproj", "{458AABF2-57D3-4012-B5D8-952FE1B0D96B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared Items", "Shared Items", "{B0D45CB6-9F9A-436F-BC13-19903CB3A87C}"
+	ProjectSection(SolutionItems) = preProject
+		public.props = public.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6509554-11B1-4F0F-84D5-E2D0C9656746}
+	EndGlobalSection
+EndGlobal

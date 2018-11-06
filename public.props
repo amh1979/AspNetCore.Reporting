@@ -1,0 +1,25 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_Version>2.1.0.0</_Version>
+    <AssemblyVersion>$(_Version)</AssemblyVersion>
+    <ProductVersion>$(_Version)</ProductVersion>
+    <FileVersion>$(_Version)</FileVersion>
+    <Version>$(_Version)</Version>
+    <AssemblyOriginatorKeyFile>..\Reporting.pfx</AssemblyOriginatorKeyFile>
+    <Copyright>©amh1979 2016-2019</Copyright>
+    <SignAssembly>true</SignAssembly>
+    <Authors>WeiGe</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>WeiYeJiTuan</Company>
+    
+    <!--<PackageIconUrl>https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/8723616d68313937399f06</PackageIconUrl>-->
+    <IncludeSymbols>true</IncludeSymbols>
+    <PublisherName>amh1979</PublisherName>
+    <PackageProjectUrl>http://www.amhx.org</PackageProjectUrl>
+    <PackageLicenseUrl>http://www.amhx.org</PackageLicenseUrl>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/5fd72fa11159da10dfd3c3d580bb3f9e?s=100&amp;r=g&amp;d=retro</PackageIconUrl>
+    <PublishUrl>http://www.amhx.org</PublishUrl>
+    <!--<NetStandardImplicitPackageVersion>netstandard1.6.1</NetStandardImplicitPackageVersion>-->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+</Project>
