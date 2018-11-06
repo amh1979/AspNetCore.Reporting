@@ -42,9 +42,6 @@
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCore.ReportingServices\AspNetCore.ReportingServices.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <None Update="wwwroot/**" Pack="true" PackageCopyToOutput="true" PackagePath=""></None>
   </ItemGroup>
 </Project>

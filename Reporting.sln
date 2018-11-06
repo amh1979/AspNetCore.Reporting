@@ -4,8 +4,6 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Reporting", "AspNetCore.Reporting\AspNetCore.Reporting.csproj", "{A7F79B47-D6E0-489F-864A-E2223DBE685A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.ReportingServices", "AspNetCore.ReportingServices\AspNetCore.ReportingServices.csproj", "{458AABF2-57D3-4012-B5D8-952FE1B0D96B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared Items", "Shared Items", "{B0D45CB6-9F9A-436F-BC13-19903CB3A87C}"
 	ProjectSection(SolutionItems) = preProject
 		public.props = public.props
@@ -21,10 +19,6 @@ Global
 		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7F79B47-D6E0-489F-864A-E2223DBE685A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{458AABF2-57D3-4012-B5D8-952FE1B0D96B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
