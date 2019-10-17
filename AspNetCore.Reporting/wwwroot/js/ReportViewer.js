@@ -1,4 +1,4 @@
-﻿(function (factory) {
+(function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
@@ -36,9 +36,9 @@
         }
         //exportType 2,4,6,9
         //executeType 0 (show),1 export,2 findString,3 toggle
-        $this.request = { path: null, sessionId: null, pageIndex: 1, pageCount: 0, findString: null, exportType: null, executeType: 0,reset:false };        
+        $this.request = { path: null, sessionId: null, pageIndex: 1, pageCount: 0, findString: null, exportType: null, executeType: 0,reset:false };
 
-        
+
         //loaded function return response as {status,data:{content,sessionId,pageIndex,pageCount,fileName,stream }}
         //error function
         this.loadReport = function () {
@@ -46,8 +46,8 @@
             $this.loadding = true;
             if (typeof options.onLoading === 'function') {
                 options.onLoading($this.request,$this);
-            }           
-            var request = cloneDeep($this.request);           
+            }
+            var request = cloneDeep($this.request);
             if (!request) {
                 options.onError('Please set request.');
                 return;
@@ -61,8 +61,7 @@
             if (!request.path || request.path.length == 0) {
                 options.onError('Please set the path of request for report.');
                 return;
-            }
-            //request.sessionId = getOrSetSession();
+            };
             console.log(request);
             jQuery.ajax({
                 url: options.server, type: "POST", contentType: 'application/json; charset=utf-8',
@@ -75,8 +74,7 @@
                         return;
                     }
                     try {
-                        //getOrSetSession(response.data.sessionId);
-                        loadedSuccess(response.data, response,$this);
+                        loadedSuccess(response.data, response);
                         if (typeof options.onLoaded === 'function') {
                             options.onLoaded(response, request);
                         }
@@ -99,7 +97,7 @@
                 value[m] = obj[m];
             }
             return value;
-        }
+        };
         $this.loadding = false;
         var loadedSuccess = function (data, response) {
             switch ($this.request.executeType) {
@@ -121,8 +119,7 @@
                         setTimeout(function () {
                             window.URL.revokeObjectURL(url);
                         }, 100);
-                        //a.remove();
-                    }
+                    };
                     return;
 
                 case 2://findString
@@ -163,7 +160,7 @@
                     $this.request.executeType = 3;
                     $this.loadReport();
                     $this.request.toggleId = null;
-                }                
+                }
             });
             $this.find("img").each(function (index, item) {
                 if ($(this).attr("alt") === "+") {
@@ -173,25 +170,7 @@
                     this.src = options.webRootPath + "/images/Minus.gif";
                 }
             });
-        }
-        function scroll() {
-            var p = $this.find(".currentFind").position();
-            //console.log(p, $this.offset(), $this.find(".currentFind").offset(), $this.scrollTop());
-            //$("body").scrollTo(p.left, p.top);
-        }
-        function getOrSetSession(sessionId) {
-            if (sessionId) {
-                var Days = 3; //此 cookie 将被保存 3 天
-                var exp = new Date();    //new Date("December 31, 9998");
-                exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
-                document.cookie = "SSRS_SessionId=" + escape(sessionId) + ";expires=" + exp.toGMTString();
-                return sessionId;
-            }
-            var x = /(^| )SSRS_SessionId=([^;]+)(;|$)/gi.exec(document.cookie);
-            if (x) {
-                return unescape(x[2]);
-            }
-        }
+        };
         function init() {
             $("#ssrs_pageNum").text($this.request.pageCount);
             $("#ssrs_page").val($this.request.pageIndex);
